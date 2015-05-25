@@ -1,7 +1,7 @@
 <?php
-namespace TelepayApi\Services;
+namespace ChipChap\Services;
 
-class HalcashSP extends BaseService {
+class HalcashService extends BaseService {
 
     public function send($phone,$country,$amount,$reference,$pin,$transaction_id){
         return $this->call(

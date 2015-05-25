@@ -1,5 +1,5 @@
 <?php
-namespace TelepayApi\Services;
+namespace ChipChap\Services;
 
 class TransactionStatus extends BaseService {
 

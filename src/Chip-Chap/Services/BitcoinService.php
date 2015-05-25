@@ -1,9 +1,9 @@
 <?php
-namespace TelepayApi\Services;
+namespace ChipChap\Services;
 
-class Bitcoin extends BaseService {
+class BitcoinService extends BaseService {
 
-    public function request($satoshis,$confirmations,$expiresIn){
+    public function request($satoshis, $confirmations, $expiresIn){
         return $this->call(
             'services/v1/btc_pay',
             array(),
@@ -17,7 +17,7 @@ class Bitcoin extends BaseService {
         );
     }
 
-    public function send($satoshis,$address){
+    public function send($satoshis, $address){
         return $this->call(
             'services/v1/btc_send',
             array(),

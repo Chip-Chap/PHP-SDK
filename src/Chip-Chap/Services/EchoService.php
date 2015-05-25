@@ -1,7 +1,7 @@
 <?php
-namespace TelepayApi\Services;
+namespace ChipChap\Services;
 
-class Sample extends BaseService {
+class EchoService extends BaseService {
 
     public function make($param,$amount,$currency){
         return $this->call(

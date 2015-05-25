@@ -1,7 +1,7 @@
 <?php
-namespace TelepayApi\Services;
+namespace ChipChap\Services;
 
-class Faircoin extends BaseService {
+class FaircoinService extends BaseService {
 
     public function request($satoshis,$confirmations,$expiresIn){
         return $this->call(

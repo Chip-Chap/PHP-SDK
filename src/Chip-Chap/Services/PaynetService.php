@@ -1,7 +1,7 @@
 <?php
-namespace TelepayApi\Services;
+namespace ChipChap\Services;
 
-class Paynetref extends BaseService {
+class PaynetService extends BaseService {
 
     public function request($client_reference,$amount,$description){
         return $this->call(

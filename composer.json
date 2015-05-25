@@ -1,18 +1,19 @@
 {
-  "name": "telepay/php-sdk",
-    "description": "The Telepay PHP SDK for easy integrate Telepay APIs from PHP",
+  "name": "chip-chap/php-sdk",
+    "description": "The Chip-Chap PHP SDK for easy integrate Chip-Chap APIs from PHP",
     "authors": [
       {
-        "name": "Rick Moreno",
-        "email": "dev@telepay.net"
+        "name": "Lluis Santos",
+        "email": "cto@chip-chap.com"
       }
     ],
       "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+        "chip-chap/php-curl-lowlevel-api": "dev-master"
       },
       "autoload": {
         "psr-0": {
-          "TelepayApi": "src/"
+          "ChipChap": "src/"
         }
       }
 }
