@@ -1,7 +1,8 @@
 <?php
-namespace ChipChap\Services;
 
 namespace ChipChap\Integrator\Services;
+
+use ChipChapLL\BaseRequester;
 
 class FaircoinService extends BaseRequester {
 
