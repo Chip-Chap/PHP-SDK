@@ -8,11 +8,12 @@
 
 namespace ChipChap\Integrator;
 
-use ChipChap\Services\BitcoinService;
-use ChipChap\Services\EchoService;
-use ChipChap\Services\FaircoinService;
-use ChipChap\Services\HalcashService;
-use ChipChap\Services\PaynetService;
+use ChipChap\Integrator\Services\BitcoinService;
+use ChipChap\Integrator\Services\EchoService;
+use ChipChap\Integrator\Services\FaircoinService;
+use ChipChap\Integrator\Services\HalcashService;
+use ChipChap\Integrator\Services\PaynetService;
+use ChipChapLL\Core\Credentials;
 
 class ServicesManager {
     public $echo;
@@ -21,11 +22,11 @@ class ServicesManager {
     public $paynet;
     public $halcash;
 
-    public function __construct(){
-        $this->echo = new EchoService($this->credentials, $this->url);
-        $this->bitcoin = new BitcoinService($this->credentials, $this->url);
-        $this->faircoin = new FaircoinService($this->credentials, $this->url);
-        $this->paynet = new PaynetService($this->credentials, $this->url);
-        $this->halcash = new HalcashService($this->credentials, $this->url);
+    public function __construct(Credentials $credentials, $url){
+        $this->echo = new EchoService($credentials, $url);
+        $this->bitcoin = new BitcoinService($credentials, $url);
+        $this->faircoin = new FaircoinService($credentials, $url);
+        $this->paynet = new PaynetService($credentials, $url);
+        $this->halcash = new HalcashService($credentials, $url);
     }
 }

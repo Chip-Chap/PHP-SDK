@@ -1,6 +1,6 @@
 <?php
 
-namespace ChipChap\Services;
+namespace ChipChap\Integrator\Services;
 
 use ChipChapLL\BaseRequester;
 

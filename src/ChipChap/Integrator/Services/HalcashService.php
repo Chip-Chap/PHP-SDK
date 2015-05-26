@@ -1,7 +1,7 @@
 <?php
 namespace ChipChap\Services;
 
-use ChipChapLL\BaseRequester;
+namespace ChipChap\Integrator\Services;
 
 class HalcashService extends BaseRequester {
 

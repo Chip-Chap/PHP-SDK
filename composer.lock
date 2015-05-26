@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chip-Chap/php-curl-lowlevel-api.git",
-                "reference": "7edf47820194db09b86f99ffd9be0d6e8712733b"
+                "reference": "2b9aacc56a39b766a04f810bc6f09bd1153b4b0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chip-Chap/php-curl-lowlevel-api/zipball/7edf47820194db09b86f99ffd9be0d6e8712733b",
-                "reference": "7edf47820194db09b86f99ffd9be0d6e8712733b",
+                "url": "https://api.github.com/repos/Chip-Chap/php-curl-lowlevel-api/zipball/2b9aacc56a39b766a04f810bc6f09bd1153b4b0a",
+                "reference": "2b9aacc56a39b766a04f810bc6f09bd1153b4b0a",
                 "shasum": ""
             },
             "require": {
@@ -38,7 +38,7 @@
                 }
             ],
             "description": "The Chip-Chap Curl low level API for PHP",
-            "time": "2015-05-25 20:32:40"
+            "time": "2015-05-26 16:26:17"
         }
     ],
     "packages-dev": [],
