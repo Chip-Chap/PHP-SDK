@@ -1,7 +1,9 @@
 <?php
 namespace ChipChap\Services;
 
-class TransactionStatus extends BaseService {
+use ChipChapLL\BaseRequester;
+
+class TransactionStatus extends BaseRequester {
 
     public function status($transaction_id){
         return $this->call(

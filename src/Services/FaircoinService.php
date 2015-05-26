@@ -1,7 +1,9 @@
 <?php
 namespace ChipChap\Services;
 
-class FaircoinService extends BaseService {
+use ChipChapLL\BaseRequester;
+
+class FaircoinService extends BaseRequester {
 
     public function request($satoshis,$confirmations,$expiresIn){
         return $this->call(

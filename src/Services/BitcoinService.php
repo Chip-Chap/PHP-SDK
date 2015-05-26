@@ -1,7 +1,10 @@
 <?php
+
 namespace ChipChap\Services;
 
-class BitcoinService extends BaseService {
+use ChipChapLL\BaseRequester;
+
+class BitcoinService extends BaseRequester {
 
     public function request($satoshis, $confirmations, $expiresIn){
         return $this->call(

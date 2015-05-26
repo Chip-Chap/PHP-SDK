@@ -27,6 +27,5 @@ class ServicesManager {
         $this->faircoin = new FaircoinService($this->credentials, $this->url);
         $this->paynet = new PaynetService($this->credentials, $this->url);
         $this->halcash = new HalcashService($this->credentials, $this->url);
-
     }
 }

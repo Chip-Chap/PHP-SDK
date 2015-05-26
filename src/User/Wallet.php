@@ -1,9 +1,9 @@
 <?php
 namespace ChipChap\User;
 
-use ChipChap\Services\BaseService;
+use ChipChapLL\BaseRequester;
 
-class Wallet extends BaseService {
+class Wallet extends BaseRequester {
 
     public function show(){
         return $this->call(

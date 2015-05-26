@@ -1,7 +1,9 @@
 <?php
 namespace ChipChap\Services;
 
-class HalcashService extends BaseService {
+use ChipChapLL\BaseRequester;
+
+class HalcashService extends BaseRequester {
 
     public function send($phone,$country,$amount,$reference,$pin,$transaction_id){
         return $this->call(

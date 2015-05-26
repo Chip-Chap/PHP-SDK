@@ -1,7 +1,9 @@
 <?php
 namespace ChipChap\Services;
 
-class PaynetService extends BaseService {
+use ChipChapLL\BaseRequester;
+
+class PaynetService extends BaseRequester {
 
     public function request($client_reference,$amount,$description){
         return $this->call(
