@@ -7,6 +7,7 @@
         "email": "cto@chip-chap.com"
       }
     ],
+      "minimum-stability": "dev",
       "require": {
         "chip-chap/php-curl-lowlevel-api": "dev-master"
       },
