@@ -42,7 +42,7 @@ class HalcashService extends BaseRequester {
         );
     }
 
-    public function sendV3($phone,$prefix,$country,$amount,$reference,$pin,$sms_language = 'ENG'){
+    public function sendV3($phone, $prefix, $country, $amount, $label, $pin, $sms_language = 'ENG'){
         return $this->call(
             'services/v3/halcash_send',
             array(),
@@ -51,7 +51,7 @@ class HalcashService extends BaseRequester {
                 'phone_number'      =>  $phone,
                 'country'           =>  $country,
                 'amount'            =>  $amount,
-                'reference'         =>  $reference,
+                'reference'         =>  $label,
                 'pin'               =>  $pin,
                 'phone_prefix'      =>  $prefix,
                 'sms_language'      =>  $sms_language
@@ -60,16 +60,12 @@ class HalcashService extends BaseRequester {
         );
     }
 
-    public function cancel($country,$reference,$id_telepay){
+    public function cancel($id){
         return $this->call(
-            'services/v1/halcash/cancel',
+            'services/v3/halcash_send/'.$id,
             array(),
             'PUT',
-            array(
-                'country'           =>  $country,
-                'reference'         =>  $reference,
-                'id_telepay'        =>  $id_telepay
-            ),
+            array('cancel' => true),
             array()
         );
     }
