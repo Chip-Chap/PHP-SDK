@@ -6,43 +6,7 @@ use ChipChapLL\BaseRequester;
 
 class HalcashService extends BaseRequester {
 
-    public function send($phone,$country,$amount,$reference,$pin,$transaction_id){
-        return $this->call(
-            'services/v1/halcash/send',
-            array(),
-            'POST',
-            array(
-                'phone_number'      =>  $phone,
-                'country'           =>  $country,
-                'amount'            =>  $amount,
-                'reference'         =>  $reference,
-                'pin'               =>  $pin,
-                'transaction_id'    =>  $transaction_id
-            ),
-            array()
-        );
-    }
-
-    public function sendV2($phone,$prefix,$country,$amount,$reference,$pin,$transaction_id,$alias){
-        return $this->call(
-            'services/v2/halcash/send',
-            array(),
-            'POST',
-            array(
-                'phone_number'      =>  $phone,
-                'country'           =>  $country,
-                'amount'            =>  $amount,
-                'reference'         =>  $reference,
-                'pin'               =>  $pin,
-                'transaction_id'    =>  $transaction_id,
-                'phone_prefix'      =>  $prefix,
-                'alias'             =>  $alias
-            ),
-            array()
-        );
-    }
-
-    public function sendV3($phone, $prefix, $country, $amount, $label, $pin, $sms_language = 'ENG'){
+    public function send($phone, $prefix, $country, $amount, $label, $pin, $sms_language = 'ENG'){
         return $this->call(
             'services/v3/halcash_send',
             array(),
