@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "586b0d08a5e16e5e0e0a3ba8482b6b24",
+    "content-hash": "8c6ed6558123b1c7dc3e5e57a56d2af9",
     "packages": [
         {
             "name": "chip-chap/php-curl-lowlevel-api",
