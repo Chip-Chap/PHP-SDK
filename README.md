@@ -1,4 +1,4 @@
-# Telepay API integration for PHP
+# Chip-Chap API integration for PHP
 
 This repository is a PHP implementation to interact with the Chip-Chap API.
 
