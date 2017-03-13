@@ -13,7 +13,7 @@ use ChipChapLL\BaseRequester;
 
 class Ticker extends BaseRequester {
     public function get($currency){
-        return $this->call('exchange/v1/ticker/' . $currency, array(), 'GET', array(), array());
+        return $this->call("/exchange/v1/ticker/$currency", array(), 'GET', array(), array());
     }
 }
 
