@@ -8,13 +8,28 @@
 
 namespace ChipChap\Integrator;
 
+use ChipChap\Integrator\Methods\BitcoinMethod;
+use ChipChap\Integrator\Methods\FaircoinMethod;
+use ChipChap\Integrator\Methods\HalcashMethod;
 use ChipChap\Integrator\Methods\PaynetMethod;
+use ChipChap\Integrator\Methods\VirtualCardMethod;
 use ChipChapLL\Core\Credentials;
 
 class MethodsManager {
     public $paynet;
+    public $bitcoin;
+    public $faircoin;
+    public $halcash;
+    public $virtualCard;
+
+    protected $url;
 
     public function __construct(Credentials $credentials, $url){
+        $this->url = $url;
         $this->paynet = new PaynetMethod($credentials, $url);
+        $this->bitcoin = new BitcoinMethod($credentials, $url);
+        $this->faircoin = new FaircoinMethod($credentials, $url);
+        $this->halcash = new HalcashMethod($credentials, $url);
+        $this->virtualCard = new VirtualCardMethod($credentials, $url);
     }
 }

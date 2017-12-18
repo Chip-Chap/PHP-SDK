@@ -8,7 +8,7 @@
       }
     ],
       "require": {
-        "chip-chap/php-curl-lowlevel-api": "dev-master"
+        "chip-chap/php-curl-lowlevel-api": "^1.0"
       },
       "autoload": {
         "psr-0": {

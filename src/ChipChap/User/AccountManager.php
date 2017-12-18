@@ -2,6 +2,7 @@
 namespace ChipChap\User;
 
 use ChipChapLL\BaseRequester;
+use ChipChapLL\Core\Credentials;
 
 class AccountManager extends BaseRequester {
 
@@ -15,4 +16,19 @@ class AccountManager extends BaseRequester {
         );
     }
 
+    /**
+     * @return string
+     */
+    public function getUrl()
+    {
+        // TODO: Implement getUrl() method.
+    }
+
+    /**
+     * @return Credentials
+     */
+    public function getCredentials()
+    {
+        // TODO: Implement getCredentials() method.
+    }
 }

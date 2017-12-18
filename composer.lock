@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "586b0d08a5e16e5e0e0a3ba8482b6b24",
-    "content-hash": "8c6ed6558123b1c7dc3e5e57a56d2af9",
+    "content-hash": "ba0ae2ed2a66b78d2c230054d5b36673",
     "packages": [
         {
             "name": "chip-chap/php-curl-lowlevel-api",
-            "version": "dev-master",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chip-Chap/php-curl-lowlevel-api.git",
-                "reference": "2b9aacc56a39b766a04f810bc6f09bd1153b4b0a"
+                "reference": "74e3d70fd518ee3ecffc3f45d3b8098696d33656"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chip-Chap/php-curl-lowlevel-api/zipball/2b9aacc56a39b766a04f810bc6f09bd1153b4b0a",
-                "reference": "2b9aacc56a39b766a04f810bc6f09bd1153b4b0a",
+                "url": "https://api.github.com/repos/Chip-Chap/php-curl-lowlevel-api/zipball/74e3d70fd518ee3ecffc3f45d3b8098696d33656",
+                "reference": "74e3d70fd518ee3ecffc3f45d3b8098696d33656",
                 "shasum": ""
             },
             "require": {
@@ -35,19 +34,17 @@
             "authors": [
                 {
                     "name": "Lluis Santos",
-                    "email": "cto@chip-chap.com"
+                    "email": "lluis@chip-chap.com"
                 }
             ],
             "description": "The Chip-Chap Curl low level API for PHP",
-            "time": "2015-05-26 16:26:17"
+            "time": "2017-05-05T14:49:31+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "chip-chap/php-curl-lowlevel-api": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -1,31 +1,22 @@
 <?php
 
-
 namespace ChipChap\Integrator\Methods;
 
 use ChipChapLL\BaseRequester;
 use ChipChapLL\Core\Credentials;
 
-class PaynetMethod extends BaseRequester {
+class VirtualCardMethod extends BaseRequester {
 
-    private $credentials;
-    private $url;
-
-    public function __construct(Credentials $credentials, $url)
-    {
-        $this->credentials = $credentials;
-        $this->url = $url;
-    }
-
-    public function request($client_reference, $amount, $concept){
+    public function send($amount, $email,$concept = '', $url_notification = ''){
         return $this->call(
-            'methods/v1/in/paynet_reference',
+            'methods/v1/out/cryptocapital',
             array(),
             'POST',
             array(
-                'client_reference'  =>  $client_reference,
                 'amount'            =>  $amount,
-                'concept'           =>  $concept
+                'email'             =>  $email,
+                'concept'           =>  $concept,
+                'url_notification'  =>  $url_notification
             ),
             array()
         );
@@ -33,7 +24,7 @@ class PaynetMethod extends BaseRequester {
 
     public function status($id){
         return $this->call(
-            'methods/v1/in/paynet_reference/'.$id,
+            'methods/v1/out/cryptocapital/'.$id,
             array(),
             'GET',
             array(),
@@ -46,7 +37,7 @@ class PaynetMethod extends BaseRequester {
      */
     public function getUrl()
     {
-        return $this->url;
+        // TODO: Implement getUrl() method.
     }
 
     /**
@@ -54,6 +45,6 @@ class PaynetMethod extends BaseRequester {
      */
     public function getCredentials()
     {
-        return $this->credentials;
+        // TODO: Implement getCredentials() method.
     }
 }

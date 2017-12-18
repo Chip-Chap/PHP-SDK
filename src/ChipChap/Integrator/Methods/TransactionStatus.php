@@ -4,6 +4,7 @@
 namespace ChipChap\Integrator\Methods;
 
 use ChipChapLL\BaseRequester;
+use ChipChapLL\Core\Credentials;
 
 class TransactionStatus extends BaseRequester {
 
@@ -17,4 +18,19 @@ class TransactionStatus extends BaseRequester {
         );
     }
 
+    /**
+     * @return string
+     */
+    public function getUrl()
+    {
+        // TODO: Implement getUrl() method.
+    }
+
+    /**
+     * @return Credentials
+     */
+    public function getCredentials()
+    {
+        // TODO: Implement getCredentials() method.
+    }
 }
