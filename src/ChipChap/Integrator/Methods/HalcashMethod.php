@@ -7,6 +7,15 @@ use ChipChapLL\Core\Credentials;
 
 class HalcashMethod extends BaseRequester {
 
+    private $credentials;
+    private $url;
+
+    public function __construct(Credentials $credentials, $url)
+    {
+        $this->credentials = $credentials;
+        $this->url = $url;
+    }
+
     public function send($phone, $prefix, $amount, $pin, $concept, $url_notification = ''){
         return $this->call(
             'methods/v1/out/halcash_es',
@@ -49,7 +58,7 @@ class HalcashMethod extends BaseRequester {
      */
     public function getUrl()
     {
-        // TODO: Implement getUrl() method.
+        return $this->url;
     }
 
     /**
@@ -57,6 +66,6 @@ class HalcashMethod extends BaseRequester {
      */
     public function getCredentials()
     {
-        // TODO: Implement getCredentials() method.
+        return $this->credentials;
     }
 }
