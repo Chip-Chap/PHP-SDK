@@ -11,7 +11,9 @@ namespace ChipChap\Integrator;
 use ChipChap\Integrator\Methods\BitcoinMethod;
 use ChipChap\Integrator\Methods\FaircoinMethod;
 use ChipChap\Integrator\Methods\HalcashMethod;
+use ChipChap\Integrator\Methods\OpexCardMethod;
 use ChipChap\Integrator\Methods\PaynetMethod;
+use ChipChap\Integrator\Methods\SparkCardMethod;
 use ChipChap\Integrator\Methods\VirtualCardMethod;
 use ChipChapLL\Core\Credentials;
 
@@ -31,5 +33,7 @@ class MethodsManager {
         $this->faircoin = new FaircoinMethod($credentials, $url);
         $this->halcash = new HalcashMethod($credentials, $url);
         $this->virtualCard = new VirtualCardMethod($credentials, $url);
+        $this->virtualCard = new OpexCardMethod($credentials, $url);
+        $this->virtualCard = new SparkCardMethod($credentials, $url);
     }
 }
