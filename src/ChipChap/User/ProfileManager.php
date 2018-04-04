@@ -4,7 +4,16 @@ namespace ChipChap\User;
 use ChipChapLL\BaseRequester;
 use ChipChapLL\Core\Credentials;
 
-class AccountManager extends BaseRequester {
+class ProfileManager extends BaseRequester {
+
+    private $credentials;
+    private $url;
+
+    public function __construct(Credentials $credentials, $url)
+    {
+        $this->credentials = $credentials;
+        $this->url = $url;
+    }
 
     public function read(){
         return $this->call(
@@ -21,7 +30,7 @@ class AccountManager extends BaseRequester {
      */
     public function getUrl()
     {
-        // TODO: Implement getUrl() method.
+        return $this->url;
     }
 
     /**
@@ -29,6 +38,6 @@ class AccountManager extends BaseRequester {
      */
     public function getCredentials()
     {
-        // TODO: Implement getCredentials() method.
+        return $this->credentials;
     }
 }
