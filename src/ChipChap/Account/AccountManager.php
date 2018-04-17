@@ -16,13 +16,14 @@ class AccountManager extends BaseRequester {
     }
 
     //PREPAID CARDS
-    public function registerPrepaidCard($type, $account_id, $card_id){
+    public function registerPrepaidCard($type, $account_id, $card_id, $alias = 'alias default'){
         return $this->call(
             'account/'.$account_id.'/v1/prepaidcard/'.$type.'/register',
             array(),
             'POST',
             array(
-                'card_id'   =>  $card_id
+                'card_id'   =>  $card_id,
+                'alias' =>  $alias
             ),
             array()
         );
