@@ -23,6 +23,8 @@ class MethodsManager {
     public $faircoin;
     public $halcash;
     public $virtualCard;
+    public $sparkCard;
+    public $opexCard;
 
     protected $url;
 
@@ -33,7 +35,7 @@ class MethodsManager {
         $this->faircoin = new FaircoinMethod($credentials, $url);
         $this->halcash = new HalcashMethod($credentials, $url);
         $this->virtualCard = new VirtualCardMethod($credentials, $url);
-        $this->virtualCard = new OpexCardMethod($credentials, $url);
-        $this->virtualCard = new SparkCardMethod($credentials, $url);
+        $this->opexCard = new OpexCardMethod($credentials, $url);
+        $this->sparkCard = new SparkCardMethod($credentials, $url);
     }
 }
