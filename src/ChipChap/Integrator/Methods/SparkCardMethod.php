@@ -18,7 +18,7 @@ class SparkCardMethod extends BaseRequester {
 
     public function send($amount, $card_id,$concept = '', $url_notification = '', $company_id){
         return $this->call(
-            'methods/v1/out/opex',
+            'methods/v1/out/spark',
             array(),
             'POST',
             array(
@@ -34,7 +34,7 @@ class SparkCardMethod extends BaseRequester {
 
     public function status($id){
         return $this->call(
-            'methods/v1/out/opex/'.$id,
+            'methods/v1/out/spark/'.$id,
             array(),
             'GET',
             array(),
