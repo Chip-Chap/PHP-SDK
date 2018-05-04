@@ -29,6 +29,25 @@ class AccountManager extends BaseRequester {
         );
     }
 
+    public function requestCard($type, $account_id, $address, $city, $country, $zip, $name, $surnames, $document = null, $nif_document = null){
+        return $this->call(
+            'account/'.$account_id.'/v1/prepaidcard/'.$type,
+            array(),
+            'POST',
+            array(
+                'address'   =>  $address,
+                'city'  =>  $city,
+                'country'   =>  $country,
+                'zip'   =>  $zip,
+                'name'  =>  $name,
+                'surnames'  =>  $surnames,
+                'document'  =>  $document,
+                'nif_document'=>    $nif_document
+            ),
+            array()
+        );
+    }
+
     /**
      * @return string
      */
